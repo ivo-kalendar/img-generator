@@ -14,7 +14,7 @@
         <header>
         <div class="navbar">
             <div class="logo">
-            <h2>OpenAI Image Genrator</h2>
+            <h3>OpenAI Image Genrator</h3>
             </div>
             <div class="nav-links">
             <ul>
@@ -27,30 +27,30 @@
         </header>
 
         <main>
-        <section class="showcase">
-            <form id="image-form">
-            <h1>Describe An Image</h1>
-            <div class="form-control">
-                <input type="text" id="prompt" placeholder="Enter Text" />
-            </div>
-            <!-- size -->
-            <div class="form-control">
-                <select name="size" id="size">
-                <option value="small">Small</option>
-                <option value="medium" selected>Medium</option>
-                <option value="large">Large</option>
-                </select>
-            </div>
-            <button type="submit" class="btn">Generate</button>
-            </form>
-        </section>
+            <section class="generations">
+                <form id="image-form">
+                <h1>Опиши Слика</h1>
+                <div class="form-control">
+                    <input type="text" id="prompt" placeholder="Enter Text" autocomplete="off" />
+                </div>
+                <!-- size -->
+                <div class="form-control">
+                    <select name="size" id="size">
+                    <option value="small">Мала</option>
+                    <option value="medium" selected>Средна</option>
+                    <option value="large">Голема</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Генерирај</button>
+                </form>
+            </section>
 
-        <section class="image">
-            <div class="image-container">
-            <h2 class="msg"></h2>
-            <img src="" alt="" id="image" />
-            </div>
-        </section>
+            <section class="image">
+                <div class="image-container">
+                    <h2 class="msg"></h2>
+                    <img src="" alt="" id="image" />
+                </div>
+            </section>
         </main>
 
         <div class="spinner"></div>

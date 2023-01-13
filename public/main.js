@@ -6,9 +6,10 @@ function onSubmit(e) {
   
     const prompt = document.querySelector('#prompt').value;
     const size = document.querySelector('#size').value;
+    // const n = document.querySelector('#number').value;
   
     if (prompt === '') {
-        alert('Please add some text');
+        alert('Ве молиме внесете текст');
         return;
     }
   

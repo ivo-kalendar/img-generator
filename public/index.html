@@ -29,28 +29,38 @@
         <main>
             <section class="generations">
                 <form id="image-form">
-                <h1>Опиши Слика</h1>
-                <div class="form-control">
-                    <input type="text" id="prompt" placeholder="Enter Text" autocomplete="off" />
-                </div>
-                <!-- size -->
-                <div class="form-control">
-                    <select name="size" id="size">
-                    <option value="small">Мала</option>
-                    <option value="medium" selected>Средна</option>
-                    <option value="large">Голема</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn">Генерирај</button>
+                    <p>
+                        Постави клуч од 
+                        <a href="https://beta.openai.com/account/api-keys" target="_blank" rel="noopener noreferrer">Open AI</a>
+                    </p>
+                    <div class="form-control">
+                        <input type="password" id="apikey" placeholder="Внеси Клуч" autocomplete="off" />
+                    </div>
+
+
+                    <h1>Опиши Слика</h1>
+                    <div class="form-control">
+                        <input type="text" id="prompt" placeholder="Внеси Текст" autocomplete="off" />
+                    </div>
+
+
+                    <div class="form-control">
+                        <select name="size" id="size">
+                        <option value="small">Мала</option>
+                        <option value="medium" selected>Средна</option>
+                        <option value="large">Голема</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn">Генерирај</button>
                 </form>
             </section>
 
-            <section class="image">
+            <!-- <section class="image"> -->
                 <div class="image-container">
                     <h2 class="msg"></h2>
                     <img src="" alt="" id="image" />
                 </div>
-            </section>
+            <!-- </section> -->
         </main>
 
         <div class="spinner"></div>

@@ -1,17 +1,14 @@
-// const { openai } = require('../config/openai')
-
-
-const { Configuration, OpenAIApi } = require('openai')
-const apiKey = process.env.OPENAI_API_KEY
-const configuration = new Configuration({ apiKey });
-const openai = new OpenAIApi(configuration);
+const connectAI = require("../config/openai");
 
 const generations = async (req, res) => {
-    const { prompt, size } = req.body;
+    const { prompt, size, key } = req.body;
+    // const { prompt, size } = req.body;
+    // const key = process.env.OPENAI_API_KEY
 
     const imageSize = size === 'small' ? '256x256' : size === 'medium' ? '512x512' : '1024x1024';
 
     try {
+        const openai = connectAI(key)
         const response = await openai.createImage({ prompt, n: 1, size: imageSize });
 
         const imageUrl = response.data.data[0].url;
